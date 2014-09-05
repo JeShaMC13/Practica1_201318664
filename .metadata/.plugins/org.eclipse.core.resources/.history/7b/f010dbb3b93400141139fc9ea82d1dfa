@@ -17,8 +17,7 @@ public class Menu {
 				break;
 
 			case 2:
-				System.out.println("Seleccione el numero de tokens al jugar");
-				Tokens.numero_token();
+				System.out.println("Seleccione el numero de tokens al jugar");				
 				break;
 
 			case 3:

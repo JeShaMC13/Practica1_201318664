@@ -15,12 +15,11 @@ public class Menu {
 			case 1: 
 				System.out.println("Jugar una partida");
 				break;
-
+			
 			case 2:
-				System.out.println("Seleccione el numero de tokens al jugar");
-				Tokens.numero_token();
+				System.out.println("Seleccione el numero de tokens al jugar");				
 				break;
-
+			
 			case 3:
 				System.out.println("Reglas del juego");
 				System.out.println("Love Letter se juega en diferentes rondas. \n Cada ronda representa un día.\n Al final de cada ronda, la carta de un jugador \n llega a la Princesa Annete, quien la leerá.");
@@ -38,25 +37,21 @@ public class Menu {
 				System.out.println("(7) Countess:\n El jugador tiene un Prince o King en su mano y la Countess debe jugar la Countess");
 				System.out.println("(8) Princess:\n Si el jugador juega esta carta pierde el juego\n");
 				break;
-
+			
 			case 4:
 				System.out.println("¿Desea salir de Love Letter?");
 				System.out.println("[1] Si");
 				System.out.println("[2] No");
 				int a = s.nextInt();
 				if(a==1){
-					System.out.println("Te esperamos en la proxima partida");		
+					System.out.println("Te esperamos en la proxima partida");
 					System.exit(0);
 				}
-				if(a==2){
-					Menu.main(args);
+					break;
+				default:
+					System.out.println("Debe de seleccionar un numero que este en el menú");
+					break;
 				}
-				break;
-			default:
-				System.out.println("Debe de seleccionar un número que este en el menú");
-				break;
-			}
-		}while(op!=4);
+			}while(op!=4);
 	}
 }
-
