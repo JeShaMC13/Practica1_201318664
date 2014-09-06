@@ -1,0 +1,83 @@
+import java.util.Scanner;
+public class InicioPartida {
+
+	static void juego(){	
+		String jugador;
+		int Tokenjugador=0;
+		int Tokencontricante=0;
+				
+		System.out.println("Ingrese su nombre");
+		Scanner s = new Scanner(System.in);
+		jugador = s.next();
+		
+		//Se declara una variable tipo String para el contricante ("pc")
+		String contrincante;
+		System.out.println("Ingrese el nombre de su contrincante");
+		Scanner u = new Scanner(System.in);
+	contrincante = s.next();
+	
+	//imprime en pantalla el numero de token del jugar y del contricante a la hora de jugar.
+	System.out.println(jugador+ " vrs. "+contrincante+ ":");
+	System.out.println("''"+jugador+"'':  ("+Tokenjugador+")       ''"+contrincante+"'':   ("+Tokencontricante+")");
+	
+	//Vectores de las 16 cartas del maso. Se usa el String porque ingresamos texto dentro de ellos.
+		String c[];
+		c=new String[16];
+		c[0]="Baron";
+		c[1]="Guard";
+		c[2]="Guard";
+		c[3]="Guard";
+		c[4]="Guard";
+		c[5]="Guard";
+		c[6]="Countess";
+		c[7]="Prince";
+		c[8]="Baron";
+		c[9]="Baron";
+		c[10]="Priest";
+		c[11]="Priest";
+		c[12]="Handmain";
+		c[13]="Handmain";
+		c[14]="King";
+		c[15]="Princess";
+//Vectores de las posiciones de las 8 cartas.
+		int z[];
+		z=new int[8];
+
+		z[0]=1;
+		z[1]=2;
+		z[2]=3;
+		z[3]=4;
+		z[4]=5;
+		z[5]=6;
+		z[6]=7;
+		z[7]=8;
+
+	
+		
+		do{
+CartasAleatorias.j= (int) (Math.random() * 15) + 0;
+CartasAleatorias.k= (int) (Math.random() * 15) + 0;	
+		}while(CartasAleatorias.j==CartasAleatorias.k);
+		System.out.println("Se esta jugando con ("+Tokens.token+") token(s)");
+	
+		System.out.println("Cartas del jugador\n");
+		System.out.println("Tienes en tu mano: "+ c[CartasAleatorias.j]+ "  ->   "+c[CartasAleatorias.k]);
+		
+		//Cartas aleatorios del jugador.	
+		System.out.println("(1) Usar carta  "   +c[CartasAleatorias.j]);
+	System.out.println("(2) Usar carta  " +c[CartasAleatorias.k]);
+	
+	//Cartas aleatorios del contrincante.	
+	do{
+		CartasAleatorias.d= (int) (Math.random() * 15) + 0;
+		CartasAleatorias.a= (int) (Math.random() * 15) + 0;	
+		}while(CartasAleatorias.d==CartasAleatorias.a);
+	System.out.println("Cartas que tiene el contrincante: ##     #");
+	System.out.println("Cartas del contrincante\n");
+	System.out.println("(1) Usar carta ## ");
+	System.out.println("(2) Usar carta  #");
+		
+	}	
+	}
+
+

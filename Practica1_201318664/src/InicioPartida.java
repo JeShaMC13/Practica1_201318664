@@ -59,7 +59,10 @@ CartasAleatorias.j= (int) (Math.random() * 15) + 0;
 CartasAleatorias.k= (int) (Math.random() * 15) + 0;	
 		}while(CartasAleatorias.j==CartasAleatorias.k);
 		System.out.println("Se esta jugando con ("+Tokens.token+") token(s)");
+	
+		System.out.println("Cartas del jugador\n");
 		System.out.println("Tienes en tu mano: "+ c[CartasAleatorias.j]+ "  ->   "+c[CartasAleatorias.k]);
+		
 		//Cartas aleatorios del jugador.	
 		System.out.println("(1) Usar carta  "   +c[CartasAleatorias.j]);
 	System.out.println("(2) Usar carta  " +c[CartasAleatorias.k]);
@@ -69,7 +72,11 @@ CartasAleatorias.k= (int) (Math.random() * 15) + 0;
 		CartasAleatorias.d= (int) (Math.random() * 15) + 0;
 		CartasAleatorias.a= (int) (Math.random() * 15) + 0;	
 		}while(CartasAleatorias.d==CartasAleatorias.a);
-		}	
+	System.out.println("Cartas que tiene el contrincante: ##     #");
+	System.out.println("Cartas del contrincante\n");
+	System.out.println("(1) Usar carta ## ");
+	System.out.println("(2) Usar carta  #");
+	}	
 	}
 
 

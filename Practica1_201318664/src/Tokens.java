@@ -28,13 +28,11 @@ static void numero_token(){
 		case 3:
 			Tokens.token=3;
 			System.out.println("Jugara a 7 tokens \n");
+			break;
 		default:
 			System.out.println("El número que has ingresado es incorrecto\n Debes elegir uno, tres o siete tokens .");
 		break;
 		}
 	}while(turno==1 && turno==2 && turno==3);
 }
-
-
-
 }
