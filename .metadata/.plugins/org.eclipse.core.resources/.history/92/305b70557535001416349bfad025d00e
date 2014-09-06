@@ -1,0 +1,12 @@
+
+public class InicioPartida {
+//AQUI SE PONE LO DE LOS TOKENS
+	private String nombre;
+	public void jugador(String nombre){
+		this.nombre=nombre;
+	}
+	public String getNombre(){
+		return nombre;
+	}
+}
+

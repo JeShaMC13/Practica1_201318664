@@ -1,0 +1,13 @@
+
+public class InicioPartida {
+
+	private String nombre;
+	public void jugador(String nombre){
+		this.nombre=nombre;
+		
+	}
+	public String getNombre(){
+		return nombre;
+	}
+}
+

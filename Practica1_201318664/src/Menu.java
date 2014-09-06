@@ -4,31 +4,36 @@ public class Menu {
 		int op=0;
 		Scanner s=new Scanner(System.in);
 		do{
-			System.out.println("              -=Bienvenido a Love Letter=- \n");
-			System.out.println("               [1] Jugar una partida");
-			System.out.println("       [2] Seleccionar el numero de tokens a jugar");
-			System.out.println("            [3] Monstrar las reglas del juego");
-			System.out.println("                       [4] Salir");
+			System.out.println("-=Bienvenido a Love Letter=- \n");
+			System.out.println("(1) Jugar una partida");
+			System.out.println("(2) Seleccionar el numero de tokens a jugar");
+			System.out.println("(3) Monstrar las reglas del juego");
+			System.out.println("(4) Salir");
 
 			op=s.nextInt();
 			switch(op){
 			case 1: 
-				System.out.println("Jugar una partida");
+				//Mandamos a llamar a una clase con su método
+				InicioPartida.juego();
+
 				break;
 
 			case 2:
+				//Mandamos a llamar a una clase con su método
 				System.out.println("Seleccione el numero de tokens al jugar");
 				Tokens.numero_token();
 				break;
 
 			case 3:
+				//Reglas del juego.
+
 				System.out.println("Reglas del juego");
 				System.out.println("Love Letter se juega en diferentes rondas. \n Cada ronda representa un día.\n Al final de cada ronda, la carta de un jugador \n llega a la Princesa Annete, quien la leerá.");
 				System.out.println("Cuando haya leído las suficientes carta \n de uno de los pretendientes, caerá perdidamente enamorada,\n concediendo a ese pretendiente el permiso\n para cortejarla. ");
 				System.out.println("Ese jugador ganará el corazón de la princesa y la partida. ");
 
 				System.out.println("Love Letter consta de 16 cartas \n \n");
-
+				System.out.println("Acontinuacion se le presentara la función de cada una de las cartas\n");
 				System.out.println("(1) Guard:\n Permite adivinar la mano del rival.\n (si adivina, el jugador rival salir del juego.)");
 				System.out.println("(2) Priest:\n Permite ver la mano del jugador rival");
 				System.out.println("(3) Baron:\n Compara manos con el rival, el jugador con la carta mas baja sale del juego.\n En caso de empate no sucede nada.");
@@ -40,23 +45,29 @@ public class Menu {
 				break;
 
 			case 4:
+				//Se imprime las opciones de que si desea salir o no...
 				System.out.println("¿Desea salir de Love Letter?");
 				System.out.println("[1] Si");
 				System.out.println("[2] No");
 				int a = s.nextInt();
+				//Condición para salir del juego (opcion uno).
 				if(a==1){
 					System.out.println("Te esperamos en la proxima partida");		
 					System.exit(0);
 				}
+				//Condición para regresar al menú si no se desea salir del juego.
 				if(a==2){
 					Menu.main(args);
 				}
 				break;
+
 			default:
+				//Si se ingresa un numero no solicitado en el menú imprime este mensaje.
 				System.out.println("Debe de seleccionar un número que este en el menú");
 				break;
 			}
-		}while(op!=4);
+			//Op debe de ser uno, dos, tres o cuatro pero no otro número.
+		}while(op==1 ||op==2 || op==3 || op==4 );
 	}
 }
 

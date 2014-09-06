@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Tokens {
+public static int token=1;
+
+static void numero_token(){
+	int numero;
+	Scanner t = new Scanner(System.in);
+		System.out.println("Elija la cantidad de tokens con la que desea jugar");
+		
+		do{	
+		System.out.println("[1] Un token");
+		System.out.println("[2] Tres token");
+		System.out.println("[3] Siete token");
+		numero = t.nextInt();
+
+		switch(numero){
+
+		case 1:
+			Tokens.token=1;
+			System.out.println("Jugara a 1 token \n");
+			break;
+		case 2:
+		Tokens.token=3;
+			System.out.println("Jugara a 3 tokens \n");
+			break;
+		case 3:
+			Tokens.token=7;;
+			System.out.println("Jugara a 7 tokens \n");
+		default:
+			System.out.println("El número que has ingresado es incorrecto\n Debes elegir uno, tres o siete tokens .");
+		}
+	}while(numero==1 && numero==2 && numero==3);
+}
+}
